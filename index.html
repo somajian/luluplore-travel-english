@@ -572,9 +572,55 @@
 
   .empty-mini{ text-align:center; padding:24px 10px; color:var(--ink-faint); font-size:0.88rem; }
 
+  /* ---------- Luluplore mini creator card ---------- */
+  .creator-card-wrap{
+    max-width:760px; margin:18px auto 0; padding:0 clamp(16px,4vw,40px);
+  }
+  .creator-card{
+    position:relative; overflow:hidden;
+    padding:24px 24px 22px;
+    border:1px solid var(--line); border-radius:22px;
+    background:linear-gradient(145deg,rgba(255,253,249,.78),rgba(244,236,222,.68));
+    box-shadow:0 10px 28px rgba(61,46,20,.07);
+  }
+  .creator-card::after{
+    content:"✈"; position:absolute; right:20px; top:14px;
+    font-size:42px; opacity:.08; transform:rotate(-10deg); pointer-events:none;
+  }
+  .creator-kicker{
+    font-family:var(--font-mono); font-size:.66rem; font-weight:700;
+    letter-spacing:.13em; color:var(--ink-faint); margin-bottom:8px;
+  }
+  .creator-title{
+    font-family:var(--font-display); font-size:1.18rem; font-weight:800;
+    line-height:1.4; color:var(--navy); margin:0 0 7px;
+  }
+  .creator-copy{
+    color:var(--ink-soft); font-size:.88rem; line-height:1.7; max-width:560px;
+  }
+  .creator-actions{
+    display:flex; flex-wrap:wrap; gap:9px; margin-top:16px;
+  }
+  .creator-action{
+    display:inline-flex; align-items:center; justify-content:center; gap:6px;
+    min-height:38px; padding:8px 15px; border-radius:999px;
+    text-decoration:none; font-size:.82rem; font-weight:800;
+    transition:transform .12s ease, background .12s ease, border-color .12s ease;
+  }
+  .creator-action:hover{ transform:translateY(-1px); }
+  .creator-action-main{ background:var(--navy); color:var(--bg); border:1px solid var(--navy); }
+  .creator-action-main:hover{ background:var(--amber-deep); border-color:var(--amber-deep); color:#241505; }
+  .creator-action-soft{ background:rgba(255,255,255,.38); color:var(--ink); border:1px solid var(--line); }
+  .creator-action-soft:hover{ border-color:var(--amber); }
+  .creator-wish{
+    margin-top:13px; color:var(--ink-faint); font-size:.76rem; line-height:1.55;
+  }
+  .creator-wish a{ color:var(--amber-deep); font-weight:800; text-decoration:none; }
+  .creator-wish a:hover{ text-decoration:underline; }
+
   footer{
-    padding:34px clamp(16px,4vw,40px) 44px; text-align:left; color:var(--ink-faint); font-size:0.82rem;
-    border-top:1px solid var(--line); margin-top:20px;
+    padding:20px clamp(16px,4vw,40px) 44px; text-align:left; color:var(--ink-faint); font-size:0.82rem;
+    border-top:0; margin-top:0;
   }
   .footer-links{
     display:flex; flex-direction:column; align-items:flex-start; text-align:left; gap:10px;
@@ -746,6 +792,22 @@
 
   </main>
 
+  <section class="creator-card-wrap" aria-label="About Luluplore">
+    <div class="creator-card">
+      <div class="creator-kicker">MADE WITH ♡ BY LULUPLORE</div>
+      <h2 class="creator-title">這個小工具免費提供給喜歡自由行的你 ✈️</h2>
+      <p class="creator-copy">
+        如果旅行英文剛好有幫你少慌張一點、出國更敢開口一點<br>
+        歡迎逛逛 Luluplore，也可以請 Lulu 喝杯咖啡 ☕
+      </p>
+      <div class="creator-actions">
+        <a class="creator-action creator-action-main" href="https://luluplore.com/" target="_blank" rel="noopener">🌏 逛逛 Luluplore</a>
+        <a class="creator-action creator-action-soft" href="https://luluplore.com/product/lulu-coffee/" target="_blank" rel="noopener">☕ 請 Lulu 喝咖啡</a>
+      </div>
+      <p class="creator-wish">💬 有問題或想許願新功能？<a href="https://lin.ee/iwqbGb8" target="_blank" rel="noopener">找我聊聊 →</a></p>
+    </div>
+  </section>
+
   <footer id="footerText"></footer>
 </div>
 
@@ -830,7 +892,7 @@
         "unclear-soft":{glyph:"💛", msg:"很接近了——我們讓它更容易聽懂一點。", sub:"我看得出你想表達什麼。這裡有一句更清楚的說法。", soft:true},
         "unclear":{glyph:"🌱", msg:"沒關係——我們來看看這句話可以怎麼自然地說。", sub:"現在還不會很正常，這一輪練習就是為了這個。", soft:true}
       },
-      footerHtml:"<div class=\"footer-links\"><p>📖 點這裡看詳細的自助旅行規劃完整攻略文：<a href=\"https://luluplore.com/independent-travel-allinone/\" target=\"_blank\" rel=\"noopener\">如何規劃自助旅行？機票、住宿、行程、交通、預算、行李完整攻略｜Luluplore</a></p><p>💬 想聯繫我，歡迎直接加我的<a href=\"https://lin.ee/iwqbGb8\" target=\"_blank\" rel=\"noopener\">官方LINE</a></p></div>"
+      footerHtml:"<div class=\"footer-links\"><p>© Luluplore · Travel English</p></div>"
     },
     en:{
       heroTitleHtml:"Luluplore Travel English",
@@ -901,7 +963,7 @@
         "unclear-soft":{glyph:"💛", msg:"You're close — let's make it easier to understand.", sub:"I can see what you're going for. Here's a phrase that lands more clearly.", soft:true},
         "unclear":{glyph:"🌱", msg:"No worries — let's try a natural phrase for this one.", sub:"It's totally fine not to know yet. That's exactly what this round is for.", soft:true}
       },
-      footerHtml:"<div class=\"footer-links\"><p>📖 Read the full self-guided trip planning guide: <a href=\"https://luluplore.com/independent-travel-allinone/\" target=\"_blank\" rel=\"noopener\">How to Plan a Self-Guided Trip — Flights, Stay, Itinerary, Transport, Budget & Packing | Luluplore</a></p><p>💬 Want to reach me? Add my <a href=\"https://lin.ee/iwqbGb8\" target=\"_blank\" rel=\"noopener\">official LINE</a></p></div>"
+      footerHtml:"<div class=\"footer-links\"><p>© Luluplore · Travel English</p></div>"
     }
   };
 
