@@ -636,6 +636,120 @@
     .bubble-content{ max-width:none; }
   }
 </style>
+
+<style>
+/* Luluplore Mini Creator Card — compact v4 */
+.creator-visual,.creator-plane,.creator-luggage,.creator-passport,.creator-pin{display:none !important;}
+.creator-card-wrap{
+  max-width:760px;
+  margin:22px auto 0;
+  padding:0 clamp(16px,4vw,40px);
+}
+.creator-card{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  align-items:center;
+  gap:22px;
+  padding:26px 28px 22px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(145deg,rgba(255,253,249,.88),rgba(244,236,222,.72));
+  box-shadow:0 10px 28px rgba(61,46,20,.07);
+}
+.creator-card::after{ display:none; }
+.creator-card-content{ min-width:0; }
+.creator-title{
+  margin:0 0 10px;
+  max-width:470px;
+  color:var(--navy);
+  font-family:var(--font-display);
+  font-size:1.12rem;
+  font-weight:800;
+  line-height:1.5;
+}
+.creator-copy{
+  margin:0;
+  max-width:500px;
+  color:var(--ink-soft);
+  font-size:.86rem;
+  line-height:1.8;
+}
+.creator-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:17px;
+}
+.creator-action{
+  min-height:38px;
+  padding:8px 15px;
+  font-size:.8rem;
+}
+.creator-wish{
+  margin:15px 0 0;
+  padding-top:13px;
+  border-top:1px dashed rgba(185,150,80,.35);
+  color:var(--ink-faint);
+  font-size:.75rem;
+  line-height:1.55;
+}
+.creator-visual{
+  position:relative;
+  width:150px;
+  height:125px;
+  justify-self:end;
+}
+.creator-plane{
+  position:absolute;
+  left:0;
+  top:4px;
+  font-size:31px;
+  transform:rotate(-7deg);
+}
+.creator-luggage{
+  position:absolute;
+  left:48px;
+  top:45px;
+  font-size:52px;
+}
+.creator-passport{
+  position:absolute;
+  right:2px;
+  bottom:5px;
+  font-size:40px;
+  transform:rotate(7deg);
+}
+.creator-pin{
+  position:absolute;
+  right:8px;
+  top:20px;
+  font-size:25px;
+}
+@media(max-width:620px){
+  .creator-card{
+    grid-template-columns:1fr;
+    gap:10px;
+    padding:23px 21px 20px;
+  }
+  .creator-title{
+    font-size:1.05rem;
+  }
+  .creator-copy{
+    font-size:.82rem;
+  }
+  .creator-visual{
+    display:none;
+  }
+  .creator-actions{
+    margin-top:15px;
+  }
+  .creator-action{
+    padding:8px 13px;
+    font-size:.76rem;
+  }
+}
+</style>
+
 </head>
 <body>
 <div id="app">
@@ -794,17 +908,18 @@
 
   <section class="creator-card-wrap" aria-label="About Luluplore">
     <div class="creator-card">
-      <div class="creator-kicker">MADE WITH ♡ BY LULUPLORE</div>
-      <h2 class="creator-title">這個小工具免費提供給喜歡自由行的你 ✈️</h2>
-      <p class="creator-copy">
-        如果旅行英文剛好有幫你少慌張一點、出國更敢開口一點<br>
-        歡迎逛逛 Luluplore，也可以請 Lulu 喝杯咖啡 ☕
-      </p>
-      <div class="creator-actions">
-        <a class="creator-action creator-action-main" href="https://luluplore.com/" target="_blank" rel="noopener">🌏 逛逛 Luluplore</a>
-        <a class="creator-action creator-action-soft" href="https://luluplore.com/product/lulu-coffee/" target="_blank" rel="noopener">☕ 請 Lulu 喝咖啡</a>
+      <div class="creator-card-content">
+        <h2 class="creator-title">這個小工具免費提供給喜歡自由行的你 ✈️</h2>
+        <p class="creator-copy">
+          如果旅行英文剛好有幫你少慌張一點、出國更敢開口一點<br>
+          歡迎逛逛 Luluplore，也可以請 Lulu 喝杯咖啡 ☕
+        </p>
+        <div class="creator-actions">
+          <a class="creator-action creator-action-main" href="https://luluplore.com/" target="_blank" rel="noopener">🌏 逛逛 Luluplore</a>
+          <a class="creator-action creator-action-soft" href="https://luluplore.com/product/lulu-coffee/" target="_blank" rel="noopener">☕ 請 Lulu 喝咖啡</a>
+        </div>
+        <p class="creator-wish">💬 有問題或想許願新功能？<a href="https://lin.ee/iwqbGb8" target="_blank" rel="noopener">找我聊聊 →</a></p>
       </div>
-      <p class="creator-wish">💬 有問題或想許願新功能？<a href="https://lin.ee/iwqbGb8" target="_blank" rel="noopener">找我聊聊 →</a></p>
     </div>
   </section>
 
