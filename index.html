@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>luluplore-travel-english</title>
+<!-- Luluplore home-screen icons -->
+<meta name="application-name" content="旅行英文">
+<meta name="apple-mobile-web-app-title" content="旅行英文">
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png?v=20261002">
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png?v=20261002">
+<link rel="manifest" href="./manifest.webmanifest?v=20261002">
+
 <meta name="description" content="Luluplore 旅行英文 — 出國前臨時抱佛腳，也適合平常慢慢學的旅行英文小工具">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7397,17 +7404,17 @@
     },
     {
       id:"resort-shuttle", category:"Travel", tag:"resort",
-      title:"Call for a Shuttle", titleZh:"打電話叫接駁車",
-      description:"Call the front desk to request a shuttle to the lobby.", descriptionZh:"打電話請前台派接駁車到房間，載你去大廳。",
+      title:"Call for a Shuttle / Buggy", titleZh:"打電話叫 Shuttle / Buggy",
+      description:"Call the front desk to request a shuttle or buggy to the lobby.", descriptionZh:"打電話請前台派 Shuttle 或 Buggy 到房間，載你去大廳。",
       difficulty:"Beginner", minutes:"3–5 min", minutesZh:"3–5 分鐘",
-      context:"You're in your resort room and want to take the shuttle to the main lobby.",
-      contextZh:"你現在人在渡假村房間，想搭接駁車到大廳。",
+      context:"You're in your resort room and want to take the shuttle or buggy to the main lobby.",
+      contextZh:"你現在人在渡假村房間，想搭 Shuttle 或 Buggy 到大廳。",
       opening:"Good afternoon. How can I help you?", openingZh:"午安，有什麼我可以幫您的嗎？",
       keyPhrase:"Hi, I'd like to request a shuttle, please.",
       keyExplain:"\"I'd like to...\" is a polite way to make a request over the phone.",
       keyExplainZh:"「I'd like to...」是電話中禮貌提出需求的說法。",
       natural:"Hi, I'd like to request a shuttle to the main lobby, please.",
-      vocab:[{word:"shuttle", meaning:"a vehicle that takes guests around the resort", meaningZh:"接駁車", example:"Could you send a shuttle to our room?"}],
+      vocab:[{word:"shuttle", meaning:"a vehicle or service that takes guests around the resort", meaningZh:"接駁車／接駁服務", example:"Could you send a shuttle to our room?"}, {word:"buggy", meaning:"a small electric resort vehicle, often similar to a golf cart", meaningZh:"渡假村常見的小型電動接駁車", example:"Could you send a buggy to pick us up from our room?"}],
       grammar:null, grammarZh:null,
       keywords:["shuttle","request","like","send","please"],
       conversation:[
@@ -7419,7 +7426,7 @@
           keyExplain:"\"I'd like to...\" is a polite way to make a request over the phone.",
           keyExplainZh:"「I'd like to...」是電話中禮貌提出需求的說法。",
           natural:"Hi, I'd like to request a shuttle to the main lobby, please.",
-          vocab:[{word:"shuttle", meaning:"a vehicle that takes guests around the resort", meaningZh:"接駁車", example:"Could you send a shuttle to our room?"}],
+          vocab:[{word:"shuttle", meaning:"a vehicle or service that takes guests around the resort", meaningZh:"接駁車／接駁服務", example:"Could you send a shuttle to our room?"}, {word:"buggy", meaning:"a small electric resort vehicle, often similar to a golf cart", meaningZh:"渡假村常見的小型電動接駁車", example:"Could you send a buggy to pick us up from our room?"}],
           keywords:["shuttle","request","like","send","please"],
           grammar:null, grammarZh:null
         },
@@ -7789,6 +7796,7 @@
     {id:"RS08", category:"resort", cardType:"what_they_might_ask", chinese:"（工作人員說）早餐在主餐廳供應。", english:"Breakfast is served at the main restaurant.", vocab:[{word:"main restaurant"}], possibleReply:"Great, thank you!", scenarioId:"resort-breakfast"},
     {id:"RS09", category:"resort", cardType:"how_to_say", priority:"essential", chinese:"我想請你們派一輛接駁車過來。", english:"Hi, I'd like to request a shuttle, please.", vocab:[{word:"shuttle"},{word:"request"}], scenarioId:"resort-shuttle"},
     {id:"RS10", category:"resort", cardType:"how_to_say", priority:"useful", chinese:"可以派接駁車到我們房間嗎？", english:"Could you send a shuttle to our room?", vocab:[{word:"shuttle stop"},{word:"pick-up"}], alternative:"We're in Room 305.", scenarioId:"resort-shuttle"},
+    {id:"RS10B", category:"resort", cardType:"how_to_say", priority:"essential", chinese:"可以派一台 Buggy 來我們房間接我們嗎？", english:"Could you send a buggy to pick us up from our room?", vocab:[{word:"buggy"},{word:"pick-up"}], alternative:"Could we get a buggy, please?", scenarioId:"resort-shuttle"},
     {id:"RS11", category:"resort", cardType:"what_they_might_ask", chinese:"（工作人員問）請問您的房號是？", english:"What's your room number?", vocab:[{word:"room number"}], possibleReply:"We're in Room 305.", scenarioId:"resort-shuttle"},
     {id:"RS12", category:"resort", cardType:"what_they_might_ask", chinese:"（工作人員問）請問您想去哪裡？", english:"Where would you like to go?", vocab:[{word:"drop-off"},{word:"main lobby"}], possibleReply:"We'd like to go to the main lobby.", scenarioId:"resort-shuttle"},
     {id:"RS13", category:"resort", cardType:"how_to_say", priority:"essential", chinese:"我想預約兩人份的獨木舟活動。", english:"I'd like to book kayaking for two, please.", vocab:[{word:"kayaking"},{word:"reservation"}], scenarioId:"resort-activity-kayak"},
@@ -12914,7 +12922,21 @@
       "keywords": ["shuttle", "接駁車", "接駁"],
       "relatedCardId": "RS09",
       "scenarioId": "resort-shuttle",
-      "relatedWordIds": ["W-RES-14", "W-RES-15", "W-RES-16"],
+      "relatedWordIds": ["W-RES-13B", "W-RES-14", "W-RES-15", "W-RES-16"],
+      "priority": "essential"
+    },
+    {
+      "id": "W-RES-13B",
+      "entryType": "word",
+      "english": "buggy",
+      "chineseMeaning": "渡假村常見的小型電動接駁車",
+      "category": "resort",
+      "example": "Could you send a buggy to pick us up from our room?",
+      "exampleZh": "可以派一台 Buggy 來我們房間接我們嗎？",
+      "keywords": ["buggy", "接駁車", "電動接駁車", "高爾夫球車", "golf cart", "resort buggy"],
+      "relatedCardId": "RS10B",
+      "scenarioId": "resort-shuttle",
+      "relatedWordIds": ["W-RES-13", "W-RES-15", "W-RES-16"],
       "priority": "essential"
     },
     {
